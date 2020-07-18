@@ -4,20 +4,23 @@
 /* выделенный цвет текста - #FFFFFF*/
 /* выделенный цвет текста - #2196F3*/
 /* цвет текста в адресе и инпуте - rgba(255, 255, 255, 0.6)*/
+
 /* цвет фона героя и текста карточки "Чем мы занимаемся" - rgba(47, 48, 58, 0.8)*/
 /* цвет фона секции "Наша команда" - #F5F4FA*/
 /* цвет фона футера - #2F303A*/
-/*цвет фона иконок соцсетей футера - rgba(255, 255, 255, 0.1)*/
+/* цвет фона иконок соцсетей футера - rgba(255, 255, 255, 0.1)*/
 /* цвет ховера карточки портфолио - rgba(33, 150, 243, 0.9)*/
+
+/* цвет тени кнопки - 0px 4px 4px rgba(0, 0, 0, 0.15) */
 /* цвет тени ховерной карточки - 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12)*/
 /* цвет тени карточки - 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12)*/
 /* цвет бордера - #AFB1B8 */
 
-/*шрифт логотипа - Raleway, bold*/
-/*шрифт навигации и заголовка карточки - Roboto, 500*/
-/*шрифт героя - Roboto, 900*/
-/*шрифт кнопки и заголовков - Roboto, bold*/
-/*шрифт абзаца и адреса - Roboto, normal*/
+/* шрифт логотипа - Raleway, bold */
+/* шрифт навигации и заголовка карточки - Roboto, 500 */
+/* шрифт героя - Roboto, 900 */
+/* шрифт кнопки и заголовков - Roboto, bold */
+/* шрифт абзаца и адреса - Roboto, normal */
 
 /*кастомные css свойства*/
 :root {
@@ -31,9 +34,10 @@
   --first-background-color: rgba(47, 48, 58, 0.8);
   --second-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
-  --footer-backgrpund-item-color: rgba(255, 255, 255, 0.1);
+  --footer-background-item-color: rgba(255, 255, 255, 0.1);
   --hover-card-color: rgba(33, 150, 243, 0.9);
 
+  --bottom-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --card-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   --card-shadow-hover: 1px 4px 6px rgba(0, 0, 0, 0.16),
@@ -58,6 +62,7 @@ h2,
 h3,
 h4 {
   font-size: inherit;
+  margin: 0;
 }
 
 a {
@@ -68,23 +73,43 @@ a {
   list-style: none;
 }
 
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
+  outline: solid 1px red;
+}
 .button {
   color: var(--third-color);
   background-color: var(--accent-text-color);
+
   font-family: inherit;
   font-weight: 700;
   font-size: inherit;
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
+
   align-items: center;
+  padding: 10px 32px;
+  min-width: 200px;
+  min-height: 50px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: var(--bottom-shadow);
 }
 .button.menu {
   color: var(--primary-text-color);
   background-color: var(--second-background-color);
+
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: 0.03em;
+
+  padding: 6px 22px;
+  min-width: 73px;
+  min-height: 38px;
+  box-shadow: none;
 }
 .button.menu:hover,
 .button.menu:focus {
@@ -137,36 +162,47 @@ a {
 /*hero*/
 .hero {
   background-color: var(--first-background-color);
+
+  text-align: center;
+  margin-bottom: 94px;
 }
 .hero-title {
   color: var(--third-color);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 
 /*our advantage*/
-/*feature + footer title*/
-.feature,
-.footer .title {
+.feature {
   font-size: 14px;
+  margin-bottom: 94px;
 }
 .feature .title {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
-/*img + team section background color*/
-.feature-img,
-.team-section {
+.feature-img {
   background-color: var(--second-background-color);
+
+  margin-bottom: 30px;
 }
 .text {
   color: var(--secondary-text-color);
+
   line-height: 1.71;
+}
+/* developments */
+.developments {
+  margin-bottom: 104px;
 }
 
 /*our developments + our team + our clients*/
@@ -177,6 +213,8 @@ a {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-bottom: 50px;
 }
 .developments-title {
   color: var(--third-color);
@@ -189,26 +227,34 @@ a {
 }
 
 /*our team*/
-/*.team-section {
+.team-section {
   background-color: var(--second-background-color);
-}*/
-/*.team-section .prim-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}*/
+
+  padding-top: 84px;
+  padding-bottom: 104px;
+  margin-bottom: 84px;
+}
 .team-card {
+  background-color: var(--third-color);
+
   line-height: 1.19;
   text-align: center;
-  background-color: var(--third-color);
+
   box-shadow: var(--card-shadow);
+}
+.team-img {
+  margin-bottom: 30px;
 }
 .team-id-name {
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .team-card .text {
   line-height: 1.19;
+  margin-bottom: 16px;
+}
+.soсial-links {
+  padding-bottom: 24px;
 }
 .personal-page:hover,
 .personal-page:focus,
@@ -218,12 +264,16 @@ a {
 }
 
 /*our clients*/
-/*.client-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}*/
+.client {
+  margin-bottom: 94px;
+}
+.client-link {
+  width: 170px;
+  height: 90px;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
 
 /*footer*/
 .footer {
@@ -235,18 +285,23 @@ a {
   color: var(--third-color);
 }
 .address {
-  font-style: 400;
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+
+  margin-top: 20px;
 }
 .address .contacts {
   color: var(--fourth-text-color);
+
+  margin-top: 9px;
 }
-/*.footer .title {
+.footer .title {
   font-size: 14px;
-}*/
+}
 .footer-links {
-  background-color: var(--footer-backgrpund-item-color);
+  background-color: var(--footer-background-item-color);
 }
 /*.footer-links:focus,
 .footer-links:hover {
@@ -254,16 +309,31 @@ a {
 }*/
 
 /*portfolio*/
+.portfolio-page {
+  padding: 94px 0;
+}
+.portfolio-menu {
+  margin-bottom: 34px;
+}
+.portfolio-card {
+  margin-bottom: 30px;
+}
 .portfolio-card:hover,
 .portfolio-card:focus {
   box-shadow: var(--card-shadow-hover);
 }
+.card-title {
+  margin: 20px 24px;
+}
 .portfolio-title {
   color: var(--primary-text-color);
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
 }
 .portfolio-card .text {
   line-height: 1.87;

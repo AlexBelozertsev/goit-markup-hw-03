@@ -1,0 +1,276 @@
+/* цвет текста логотипа - #000000 *
+/* основной цвет текста - #212121 */
+/* дополнительный цвет текста - #757575 */
+/* выделенный цвет текста - #FFFFFF*/
+/* выделенный цвет текста - #2196F3*/
+/* цвет текста в адресе и инпуте - rgba(255, 255, 255, 0.6)*/
+/* цвет фона героя и текста карточки "Чем мы занимаемся" - rgba(47, 48, 58, 0.8)*/
+/* цвет фона секции "Наша команда" - #F5F4FA*/
+/* цвет фона футера - #2F303A*/
+/*цвет фона иконок соцсетей футера - rgba(255, 255, 255, 0.1)*/
+/* цвет ховера карточки портфолио - rgba(33, 150, 243, 0.9)*/
+/* цвет тени ховерной карточки - 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12)*/
+/* цвет тени карточки - 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12)*/
+/* цвет бордера - #AFB1B8 */
+
+/*шрифт логотипа - Raleway, bold*/
+/*шрифт навигации и заголовка карточки - Roboto, 500*/
+/*шрифт героя - Roboto, 900*/
+/*шрифт кнопки и заголовков - Roboto, bold*/
+/*шрифт абзаца и адреса - Roboto, normal*/
+
+/*кастомные css свойства*/
+:root {
+  --logo-text-color: #000000;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --third-color: #ffffff;
+  --fourth-text-color: rgba(255, 255, 255, 0.6);
+  --accent-text-color: #2196f3;
+
+  --first-background-color: rgba(47, 48, 58, 0.8);
+  --second-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+  --footer-backgrpund-item-color: rgba(255, 255, 255, 0.1);
+  --hover-card-color: rgba(33, 150, 243, 0.9);
+
+  --card-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  --card-shadow-hover: 1px 4px 6px rgba(0, 0, 0, 0.16),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  --nav-item-shadow-hover: 0px 2px 2px rgba(0, 0, 0, 0.12),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+
+  --border-color: #afb1b8;
+}
+
+body {
+  background-color: var(--third-color);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.button {
+  color: var(--third-color);
+  background-color: var(--accent-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  align-items: center;
+}
+.button.menu {
+  color: var(--primary-text-color);
+  background-color: var(--second-background-color);
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+}
+.button.menu:hover,
+.button.menu:focus {
+  color: var(--third-color);
+  background-color: var(--accent-text-color);
+  box-shadow: var(--nav-item-shadow-hover);
+}
+
+/*logo*/
+.logo {
+  color: var(--logo-text-color);
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+}
+/*"web" + nav & contacts hovers*/
+.logo-web,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.current,
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-text-color);
+}
+
+/*nav list*/
+.nav-link,
+.contacts {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+/*.nav-link:hover,
+.nav-link:focus,
+.nav-link.current {
+  color: var(--accent-text-color);
+}*/
+
+/*Contact links*/
+.contacts {
+  color: var(--secondary-text-color);
+}
+/*.contacts:hover,
+.contacts:focus {
+  color: var(--accent-text-color);
+}*/
+
+/*hero*/
+.hero {
+  background-color: var(--first-background-color);
+}
+.hero-title {
+  color: var(--third-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/*our advantage*/
+/*feature + footer title*/
+.feature,
+.footer .title {
+  font-size: 14px;
+}
+.feature .title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+/*img + team section background color*/
+.feature-img,
+.team-section {
+  background-color: var(--second-background-color);
+}
+.text {
+  color: var(--secondary-text-color);
+  line-height: 1.71;
+}
+
+/*our developments + our team + our clients*/
+.dev-primary-title,
+.team-section .prim-title,
+.client-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.developments-title {
+  color: var(--third-color);
+  background-color: var(--first-background-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*our team*/
+/*.team-section {
+  background-color: var(--second-background-color);
+}*/
+/*.team-section .prim-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}*/
+.team-card {
+  line-height: 1.19;
+  text-align: center;
+  background-color: var(--third-color);
+  box-shadow: var(--card-shadow);
+}
+.team-id-name {
+  font-weight: 500;
+}
+.team-card .text {
+  line-height: 1.19;
+}
+.personal-page:hover,
+.personal-page:focus,
+.footer-links:focus,
+.footer-links:hover {
+  background-color: var(--accent-text-color);
+}
+
+/*our clients*/
+/*.client-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}*/
+
+/*footer*/
+.footer {
+  background-color: var(--footer-background-color);
+}
+.footer .logo,
+.address-item,
+.footer .title {
+  color: var(--third-color);
+}
+.address {
+  font-style: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.address .contacts {
+  color: var(--fourth-text-color);
+}
+/*.footer .title {
+  font-size: 14px;
+}*/
+.footer-links {
+  background-color: var(--footer-backgrpund-item-color);
+}
+/*.footer-links:focus,
+.footer-links:hover {
+  background-color: var(--accent-text-color);
+}*/
+
+/*portfolio*/
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: var(--card-shadow-hover);
+}
+.portfolio-title {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-card .text {
+  line-height: 1.87;
+}
+.hover-text {
+  color: var(--third-color);
+  background-color: var(--hover-card-color);
+  font-size: 18px;
+  line-height: 1.56;
+}

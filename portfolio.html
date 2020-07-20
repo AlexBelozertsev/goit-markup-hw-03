@@ -17,25 +17,28 @@
 
   <body>
     <header>
-      <div class="container">
+      <div class="container main">
+        <!-- logo -->
+        <a href="./index.html" class="logo"
+          ><span class="logo-web">Web</span> Studio</a
+        >
         <!-- Navigation menu -->
         <nav>
-          <!-- logo -->
-          <a href="./index.html" class="logo"
-            ><span class="logo-web">Web</span> Studio</a
-          >
-
           <!-- nav list -->
           <ul class="list">
-            <li><a href="./index.html" class="nav-link current">Студия</a></li>
-            <li><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
-            <li><a href="" class="nav-link">Контакты</a></li>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Студия</a>
+            </li>
+            <li class="nav-item">
+              <a href="./portfolio.html" class="nav-link current">Портфолио</a>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link">Контакты</a></li>
           </ul>
         </nav>
 
         <!-- Contact links -->
-        <ul class="list">
-          <li>
+        <ul class="contact list">
+          <li class="cont-items">
             <!-- знак конверта можно вставить кодом: &#9993; -->
             <a href="mailto:info@devstudio.com" class="contacts">
               <img
@@ -44,7 +47,7 @@
               />info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="cont-items">
             <a href="tel:+380961111111" class="contacts">
               <img src="images/smartphone.svg" alt="телефон" />+38 096 111
               1111</a
@@ -91,7 +94,7 @@
         <section>
           <!-- невидимый заголовок h1 -->
           <h1>Наше Портфолио</h1>
-          <ul class="list">
+          <ul class="list portfolio">
             <li class="portfolio-card">
               <a href="">
                 <img

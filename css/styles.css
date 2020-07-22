@@ -77,7 +77,6 @@ a {
   margin: 0 auto;
   width: 1200px;
   padding: 0 15px;
-  outline: solid 1px red;
 }
 .button {
   color: var(--third-color);
@@ -182,6 +181,9 @@ nav .list {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.feature-primary-title {
+  display: none;
+}
 .feature .list {
   display: flex;
 }
@@ -272,6 +274,9 @@ nav .list {
   font-weight: 500;
   margin-bottom: 10px;
 }
+.team-card > h4 {
+  display: none;
+}
 .team-card .text {
   line-height: 1.19;
   margin-bottom: 16px;
@@ -287,6 +292,7 @@ nav .list {
 .footer-links:focus,
 .footer-links:hover {
   background-color: var(--accent-text-color);
+  border-radius: 45px;
 }
 
 /*our clients*/
@@ -316,6 +322,13 @@ nav .list {
 .footer > .container {
   display: flex;
   justify-content: space-between;
+}
+.footer-block > h2 {
+  display: none;
+}
+.footer-block > a.logo {
+  display: inline-block;
+  margin-top: 60px;
 }
 .footer .logo,
 .address-item,
@@ -350,6 +363,7 @@ nav .list {
 }
 .footer-links {
   background-color: var(--footer-background-item-color);
+  border-radius: 45px;
 }
 .footer > .container:last-child {
   flex-grow: 2;
@@ -396,6 +410,7 @@ nav .list {
 }
 .portfolio-card {
   width: 370px;
+  /* width: calc((100%-2 * 30px) / 3); */
 
   margin-right: 30px;
   margin-bottom: 30px;
@@ -431,8 +446,10 @@ nav .list {
   line-height: 1.87;
 }
 .hover-text {
+  display: none;
   color: var(--third-color);
   background-color: var(--hover-card-color);
   font-size: 18px;
   line-height: 1.56;
+  padding: 63px 24px;
 }

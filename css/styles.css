@@ -15,6 +15,7 @@
 /* цвет тени ховерной карточки - 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12)*/
 /* цвет тени карточки - 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12)*/
 /* цвет бордера - #AFB1B8 */
+/* цвет бордера в инпуте - rgba(255, 255, 255, 0.3) */
 
 /* шрифт логотипа - Raleway, bold */
 /* шрифт навигации и заголовка карточки - Roboto, 500 */
@@ -46,6 +47,7 @@
     0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 
   --border-color: #afb1b8;
+  --border-input-color: rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -382,12 +384,35 @@ nav .list {
   margin-top: 72px;
   margin-bottom: 20px;
 }
-li.footer-links {
+.footer-block li {
+  display: flex;
+}
+.link-items {
+  font-size: 0;
+}
+.link-items:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-links {
+  display: inline-block;
+  align-items: center;
+
   background-color: var(--footer-background-item-color);
+
+  padding: 8px;
+
   border-radius: 50%;
 }
 #email {
+  display: inline-block;
+
+  color: var(--fourth-text-color);
+  background-color: var(--footer-background-color);
   width: 360px;
+  height: 54px;
+
+  border: 1px solid var(--border-input-color);
+  border-radius: 4px;
 }
 .footer-block:nth-child(3n) {
   width: calc(50% - 15px);

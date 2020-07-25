@@ -121,7 +121,10 @@ a {
 .contacts:focus {
   color: var(--accent-text-color);
 }
-
+.nav-link:hover,
+.nav-link:focus {
+  border-bottom: 3px solid var(--accent-text-color);
+}
 /*nav list*/
 nav .list {
   display: flex;

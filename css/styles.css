@@ -67,6 +67,10 @@ h4 {
   margin: 0;
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -93,8 +97,8 @@ a {
 
   align-items: center;
   padding: 10px 32px;
-  min-width: 200px;
-  min-height: 50px;
+  width: 200px;
+  height: 50px;
   border: none;
   border-radius: 4px;
   box-shadow: var(--bottom-shadow);
@@ -183,8 +187,7 @@ nav .list {
 /*our feature*/
 .feature {
   font-size: 14px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px calc((100% - 1200px) / 2);
 }
 .feature-primary-title {
   margin-top: 0px;
@@ -224,11 +227,12 @@ nav .list {
 .text {
   color: var(--secondary-text-color);
 
-  line-height: 1.71;
+  line-height: 1.9;
 }
 
 /* developments */
 .developments {
+  padding: 0 calc((100% - 1200px) / 2);
   padding-bottom: 104px;
 }
 /*our developments + our team + our clients*/
@@ -257,7 +261,7 @@ nav .list {
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
 }
@@ -266,8 +270,7 @@ nav .list {
 .team-section {
   background-color: var(--second-background-color);
 
-  padding-top: 84px;
-  padding-bottom: 104px;
+  padding: 94px calc((100% - 1200px) / 2);
 }
 .list.team {
   display: flex;
@@ -306,13 +309,23 @@ nav .list {
 }
 .team-card .text {
   line-height: 1.19;
-  margin-bottom: 16px;
 }
 .soсial-links {
   display: flex;
   justify-content: space-evenly;
+  font-size: 0;
 
-  padding-bottom: 24px;
+  padding: 16px 32px 24px;
+}
+.personal-page {
+  display: inline-block;
+  align-items: center;
+
+  background-color: var(--footer-background-item-color);
+
+  padding: 12px;
+
+  border-radius: 50%;
 }
 .personal-page:hover,
 .personal-page:focus,
@@ -324,6 +337,7 @@ nav .list {
 
 /*our clients*/
 .client {
+  padding: calc((100% - 1200px) / 2);
   padding-top: 84px;
   padding-bottom: 94px;
 }
@@ -331,11 +345,22 @@ nav .list {
   display: flex;
   justify-content: space-between;
 }
-.client-link img {
-  display: block;
+.client-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  width: 170px;
+  height: 90px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
+}
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-item:hover,
+.client-item:focus {
+  border: 1px solid var(--accent-text-color);
 }
 
 /*footer*/
@@ -375,14 +400,14 @@ nav .list {
 }
 .footer .title {
   font-size: 14px;
+  text-transform: uppercase;
+
+  margin-top: 72px;
+  margin-bottom: 20px;
 }
 .footer-block > .list {
   display: flex;
   justify-content: space-evenly;
-}
-.footer-block > .title {
-  margin-top: 72px;
-  margin-bottom: 20px;
 }
 .footer-block li {
   display: flex;
@@ -399,28 +424,38 @@ nav .list {
 
   background-color: var(--footer-background-item-color);
 
-  padding: 8px;
+  padding: 12px;
 
   border-radius: 50%;
-}
-#email {
-  display: inline-block;
-
-  color: var(--fourth-text-color);
-  background-color: var(--footer-background-color);
-  width: 360px;
-  height: 54px;
-
-  border: 1px solid var(--border-input-color);
-  border-radius: 4px;
 }
 .footer-block:nth-child(3n) {
   width: calc(50% - 15px);
 }
+#email {
+  box-sizing: border-box;
+  display: inline-flex;
+
+  color: var(--fourth-text-color);
+  background-color: var(--footer-background-color);
+
+  line-height: 1.25;
+  width: 355px;
+  height: 50px;
+  margin-right: 10px;
+
+  border: 1px solid var(--border-input-color);
+  border-radius: 4px;
+}
+.footer-block button {
+  box-sizing: border-box;
+  padding: 10px 30px;
+}
 
 /*portfolio*/
 .portfolio-page {
-  padding: 94px 0;
+  /* display: flex;
+  align-items: center; */
+  padding: 94px calc((100% - 1200px) / 2);
 }
 .portfolio-menu {
   margin-bottom: 34px;
@@ -472,8 +507,7 @@ nav .list {
   flex-wrap: wrap;
 }
 .portfolio-card {
-  /* width: 370px; */
-  width: calc((100% - 2 * 30px) / 3);
+  width: calc((100% - (2 * 30px)) / 3);
 
   margin-right: 30px;
   margin-bottom: 30px;
@@ -492,8 +526,11 @@ nav .list {
 .portfolio-card:focus {
   box-shadow: var(--card-shadow-hover);
 }
+.portfolio-card img {
+  display: block;
+}
 .card-title {
-  margin: 20px 24px;
+  padding: 20px 24px;
 }
 .portfolio-title {
   color: var(--primary-text-color);
@@ -506,7 +543,7 @@ nav .list {
   margin-bottom: 4px;
 }
 .portfolio-card .text {
-  line-height: 1.87;
+  line-height: 1.9;
 }
 .hover-text {
   display: none;

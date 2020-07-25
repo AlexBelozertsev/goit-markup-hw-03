@@ -175,14 +175,25 @@ nav .list {
   margin-bottom: 30px;
 }
 
-/*our advantage*/
+/*our feature*/
 .feature {
   font-size: 14px;
   padding-top: 94px;
   padding-bottom: 94px;
 }
 .feature-primary-title {
-  display: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .feature .list {
   display: flex;
@@ -210,11 +221,11 @@ nav .list {
 
   line-height: 1.71;
 }
+
 /* developments */
 .developments {
   padding-bottom: 104px;
 }
-
 /*our developments + our team + our clients*/
 .dev-primary-title,
 .team-section .prim-title,
@@ -275,7 +286,18 @@ nav .list {
   margin-bottom: 10px;
 }
 .team-card > h4 {
-  display: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .team-card .text {
   line-height: 1.19;
@@ -292,7 +314,7 @@ nav .list {
 .footer-links:focus,
 .footer-links:hover {
   background-color: var(--accent-text-color);
-  border-radius: 45px;
+  border-radius: 50%;
 }
 
 /*our clients*/
@@ -304,17 +326,13 @@ nav .list {
   display: flex;
   justify-content: space-between;
 }
-/* .client-link {
-  width: 170px;
-  height: 90px;
-  align-items: center;
-} */
 .client-link img {
   display: block;
 
   border: 1px solid var(--border-color);
   border-radius: 4px;
 }
+
 /*footer*/
 .footer {
   background-color: var(--footer-background-color);
@@ -361,12 +379,15 @@ nav .list {
   margin-top: 72px;
   margin-bottom: 20px;
 }
-.footer-links {
+li.footer-links {
   background-color: var(--footer-background-item-color);
-  border-radius: 45px;
+  border-radius: 50%;
 }
-.footer > .container:last-child {
-  flex-grow: 2;
+#email {
+  width: 360px;
+}
+.footer-block:nth-child(3n) {
+  width: calc(50% - 15px);
 }
 
 /*portfolio*/
@@ -397,6 +418,20 @@ nav .list {
   background-color: var(--accent-text-color);
   box-shadow: var(--nav-item-shadow-hover);
 }
+.portfolio-page h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .portfolio-menu > .list {
   display: flex;
   justify-content: center;
@@ -409,8 +444,8 @@ nav .list {
   flex-wrap: wrap;
 }
 .portfolio-card {
-  width: 370px;
-  /* width: calc((100%-2 * 30px) / 3); */
+  /* width: 370px; */
+  width: calc((100% - 2 * 30px) / 3);
 
   margin-right: 30px;
   margin-bottom: 30px;
